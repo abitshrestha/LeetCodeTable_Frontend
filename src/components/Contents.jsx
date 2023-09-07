@@ -35,7 +35,7 @@ const Contents = () => {
     try {
       setIsLoading(true);
       resetData();
-      const response = await axios.get(`http://localhost:3000/getuserdata`, {
+      const response = await axios.get(`https://leetcodetable-backend.onrender.com/getuserdata`, {
         params: {
           username,
         },
