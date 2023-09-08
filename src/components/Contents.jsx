@@ -35,7 +35,7 @@ const Contents = () => {
     try {
       setIsLoading(true);
       resetData();
-      const response = await axios.get(`https://leetcodetable-backend.onrender.com/getuserdata`, {
+      const response = await axios.get(`https://leetcodetable-frontend.onrender.com/getuserdata`, {
         params: {
           username,
         },
@@ -79,7 +79,7 @@ const Contents = () => {
         </button>
       </div>
       <br />
-      {isLoading?<p>Loading...</p>:''}
+      {isLoading?<div><p>Loading...</p><br/><p className="sometime">!! This may take sometime...</p></div>:''}
       {error && <p className="errormessage">{error}</p>}
       {gotData!=""?
            <table cellSpacing={0}>
